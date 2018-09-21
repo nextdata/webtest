@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+ 
+<meta charset="UTF-8">
+<title>마우스 오른쪽 버튼과 내용 선택 막기</title>
+<script language="javascript">
+function blockRightClick(){
+    alert("오른쪽 버튼은 사용할 수 없습니다.");
+    return false;
+}
+function blockSelect(){
+    alert("내용을 선택할 수 없습니다.");
+    return false;
+}
+</script>
+ 
+<body onselectstart="return blockSelect()" oncontextmenu="return blockRightClick()">
+<h2>마우스 오른쪽 버튼과 내용 선택 막기</h2>
+<div>
+     마우스로 오른쪽 버튼을 클릭하거나 드래그 해서 내용을 선택해 보세요
+</div>
+</body>
+
+
+
+   </script>
+</head>
+<body>
+ <form action="" method="post" target="">
+<fieldset>
+  <lgend>로그인</legend>
+  <label>ID<input type="text" name="id">
+  <label>PW<input type="text" name="PW">
+  <input type ="submit" value="로그인">
+  </fieldset>
+  
+  <input type="button" value="hi" onclick="alert('hi')">
+<input type="text" onchange="alert('changed')">
+<input type="text" onkeydown="alert('key down!')">
+
+
+<body>
+ 
+</body>
+</html>
+
+
+ <!-- 
+  <from>
+  <fieldset>
+  <lgend>로그인</legend>
+ <label>ID<input>
+  <label>PW<input>
+  <input>
+  </fieldset>
+ --> 
+</body>
+</html>

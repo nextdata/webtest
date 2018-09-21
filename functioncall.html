@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <script>
+   var k=0;
+   function functioncall(call10) {
+             for(var i=0; i<10; i++)
+			{
+			call10();
+			}
+			                     }
+   var call10 = function () { 
+                alert('test call'+k);
+				alert(k);
+				k++;
+				};
+						
+function returnfunction(){
+	return function(){
+	alert('test return');
+	};
+	}
+						
+			functioncall(call10); 
+	
+	returnfunction()();
+	//()() 2개
+   </script>
+</head>
+<body>
+ 
+</body>
+</html>

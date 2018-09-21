@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <script>
+
+
+//var adda = new Function('x','y', return x+y);  error
+function addb(x,y){return x+y;}
+var addc = function(x,y){return x+y;}
+alert("test");
+alert(addb(3,3), addc(4,4)); //처음1개만
+console.log(addb(3,3), addc(4,4));
+
+var person = {
+                 name: '윤인성',
+                 'with space':1234,
+                 eat: function (food){
+                                       alert(this.name + '이' + food +'를 식사중');
+									   alert(this['with space'] + '이' + food +'를 식사중');
+	                               	}
+		
+	    	};
+	person.eat('밥');
+	alert(person['with space']);
+	
+var testpc = {
+              name2: '1234',
+			  name3: '5678',
+			  name4: 'abcd'};
+var	output1 = '';
+	for (var key in testpc )
+            { output1 += '*'+key+' : '+testpc[key] + '\n'; }
+	alert(output1);
+output1 = '';
+	for (var key in testpc )
+            with(testpc){ output1 += '*'+key+' : '+(key) + '\n'; }
+		alert(output1);	
+output1 = '';
+	for (var key in testpc )		
+			with(testpc){ output1 += '*'+key+' : '+[key] + '\n'; }
+		alert(output1);	
+output1 = '';
+	for (var key in testpc )	
+			with(testpc){ output1 += '*'+key+' : '+[[key]] + '\n'; }
+	alert(output1);
+			
+		
+//console.log(adda(2,2), addb(3,3), addc(4,4));
+//var getLocalVariable = foo();
+//document.writeln(foo());
+//document.writeln(getLocalVariable);
+//getLocalVariable() // private variable
+
+
+
+
+   
+   
+	//()() 2개
+   </script>
+</head>
+<body>
+ 
+</body>
+</html>

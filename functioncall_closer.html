@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <script>
+
+
+function foo(){
+
+    var local = 'private variable';
+
+    return function bar(){
+document.writeln(local);
+        return local;
+
+    }
+
+}
+
+
+foo();
+
+//var getLocalVariable = foo();
+//document.writeln(foo());
+//document.writeln(getLocalVariable);
+//getLocalVariable() // private variable
+
+
+
+
+   
+   
+	//()() 2개
+   </script>
+</head>
+<body>
+ 
+</body>
+</html>
